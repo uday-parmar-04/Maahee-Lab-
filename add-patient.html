@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Add Patient</title>
+</head>
+
+<body>
+
+<h1>🧪 Maahee Lab</h1>
+<h2>Add Patient</h2>
+
+<input id="name" placeholder="Patient Name"><br><br>
+<input id="age" placeholder="Age"><br><br>
+<input id="mobile" placeholder="Mobile"><br><br>
+<input id="gender" placeholder="Gender"><br><br>
+
+<button onclick="savePatient()">Save Patient</button>
+
+<script>
+
+function savePatient(){
+
+let patient = {
+id: Date.now(),
+name: document.getElementById("name").value,
+age: document.getElementById("age").value,
+mobile: document.getElementById("mobile").value,
+gender: document.getElementById("gender").value
+}
+
+let data = JSON.parse(localStorage.getItem("patients")) || []
+
+data.push(patient)
+
+localStorage.setItem("patients", JSON.stringify(data))
+
+alert("Patient Saved Successfully")
+
+}
+
+</script>
+
+</body>
+</html>
