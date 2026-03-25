@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Maahee Lab System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="navbar">
+<h2>🧪 Maahee Laboratory</h2>
+
+<div id="navMenu" class="hidden">
+<a onclick="showPage('home')">Home</a>
+<a onclick="showPage('dashboard')">Dashboard</a>
+<a onclick="showPage('addPatient')">Add Patient</a>
+<a onclick="logout()">Logout</a>
+</div>
+</div>
+
+<!-- LOGIN -->
+<div id="login" class="container">
+<div class="card">
+<h2>Login</h2>
+
+<input id="user" placeholder="Username">
+<input id="pass" type="password" placeholder="Password">
+
+<button onclick="login()">Login</button>
+</div>
+</div>
+
+<!-- HOME -->
+<div id="home" class="container hidden">
+<h1>Smart & Reliable Testing</h1>
+<p>Home Sample Collection | On Call Appointment</p>
+</div>
+
+<div id="dashboard" class="container hidden">
+
+<h1>Dashboard</h1>
+
+<h3>Total Patients: <span id="count">0</span></h3>
+
+</div>
+
+<!-- ADD PATIENT -->
+<div id="addPatient" class="container hidden">
+<div class="card">
+<h2>Add Patient</h2>
+
+<input id="name" placeholder="Patient Name">
+<input id="age" placeholder="Age">
+<input id="gender" placeholder="Gender">
+<input id="mobile" placeholder="Mobile">
+<input id="address" placeholder="Address">
+
+<button onclick="savePatient()">Save Patient</button>
+</div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
